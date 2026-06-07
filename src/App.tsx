@@ -84,12 +84,15 @@ function AppContent() {
     const noScrollPages = ['home', 'contact'];
     if (noScrollPages.includes(currentPage)) {
       document.body.style.overflow = 'hidden';
+      // also lock the root/html to prevent any scrollbar appearing in some browsers
+      document.documentElement.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
 
-    // Hide the visible scrollbar on the root when contact page is active
-    if (currentPage === 'contact') {
+    // Hide the visible scrollbar on the root when contact or pricing page is active
+    if (currentPage === 'contact' || currentPage === 'pricing') {
       document.documentElement.classList.add('hide-scrollbar');
     } else {
       document.documentElement.classList.remove('hide-scrollbar');
