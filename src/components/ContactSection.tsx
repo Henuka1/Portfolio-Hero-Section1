@@ -23,16 +23,10 @@ export function ContactSection() {
     }, 900);
   }
 
-  // Hide the browser scrollbar visually while ContactSection is active
-  useEffect(() => {
-    document.documentElement.classList.add('hide-scrollbar');
-    return () => {
-      document.documentElement.classList.remove('hide-scrollbar');
-    };
-  }, []);
+  // Note: scrollbar visual hiding is applied to the section container via className below
 
   return (
-    <div className="relative w-full min-h-screen">
+    <div className="relative w-full min-h-screen hide-scrollbar">
       {/* Video background */}
       <video
         autoPlay
@@ -63,9 +57,9 @@ export function ContactSection() {
         <div className="flex-1 flex items-center justify-center px-6 py-8">
           <div className="w-full max-w-lg">
             {/* Header */}
-            <div className="mb-10">
+            <div className="mb-6">
               <p className="text-white/50 text-xs font-medium tracking-widest mb-3">GET IN TOUCH</p>
-              <h2 className="text-5xl md:text-6xl font-light text-white leading-tight">
+              <h2 className="text-3xl md:text-4xl font-light text-white leading-tight">
                 Let's build<br />something great
               </h2>
             </div>
