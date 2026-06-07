@@ -5,9 +5,16 @@
 @tailwind utilities;
 
 @layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
   body {
     @apply font-[Geist,system-ui,sans-serif];
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   /* utility to visually hide scrollbars but keep scrolling functional */
