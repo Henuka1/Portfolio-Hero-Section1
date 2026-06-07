@@ -81,11 +81,18 @@ function AppContent() {
 
   // Prevent page scrolling only when the home page is active — allow scrolling on pricing and contact
   useEffect(() => {
-    const noScrollPages = ['home'];
+    const noScrollPages = ['home', 'contact'];
     if (noScrollPages.includes(currentPage)) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
+    }
+
+    // Hide the visible scrollbar on the root when contact page is active
+    if (currentPage === 'contact') {
+      document.documentElement.classList.add('hide-scrollbar');
+    } else {
+      document.documentElement.classList.remove('hide-scrollbar');
     }
 
     return () => {
