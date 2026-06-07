@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft, Send } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
