@@ -14,7 +14,7 @@ function HomePage() {
 
   return (
     <div
-      className="min-h-screen relative overflow-hidden transition-all duration-700 ease-in-out bg-cover bg-center bg-scroll md:bg-fixed"
+      className="h-[100dvh] md:h-screen relative overflow-y-auto overflow-x-hidden transition-all duration-700 ease-in-out bg-cover bg-center bg-scroll md:bg-fixed"
       style={{
         backgroundImage: `url('${isNight ? NIGHT_BG : DAY_BG}')`,
       }}
@@ -26,11 +26,11 @@ function HomePage() {
       />
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col">
+      <div className="relative z-10 min-h-full flex flex-col">
         <Navbar />
 
         {/* Hero */}
-        <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
+        <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16 pb-24 sm:pb-16">
           <div className="w-full max-w-4xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white text-center leading-[1.05] sm:leading-tight drop-shadow-lg text-balance">
               Craft Digital Experiences That Elevate Your Brand
