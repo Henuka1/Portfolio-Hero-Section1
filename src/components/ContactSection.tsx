@@ -26,7 +26,7 @@ export function ContactSection() {
   // Note: scrollbar visual hiding is applied to the section container via className below
 
   return (
-    <div className="relative w-full min-h-screen hide-scrollbar">
+    <div className="relative w-full h-[100dvh] md:h-screen overflow-y-auto overflow-x-hidden hide-scrollbar">
       {/* Video background */}
       <video
         autoPlay
@@ -43,29 +43,29 @@ export function ContactSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/45 to-black/60" />
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col">
+      <div className="relative z-10 min-h-full flex flex-col">
         {/* Back button */}
         <button
           onClick={() => setCurrentPage('pricing')}
-          className="self-start flex items-center gap-2 px-8 py-6 text-white/70 hover:text-white transition-colors group"
+          className="self-start flex items-center gap-2 px-4 sm:px-8 py-4 sm:py-6 text-white/70 hover:text-white transition-colors group"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
           <span className="text-xs font-medium tracking-widest">BACK</span>
         </button>
 
         {/* Main content */}
-        <div className="flex-1 flex items-center justify-center px-6 py-8">
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-6 py-4 sm:py-8 pb-8 sm:pb-10">
           <div className="w-full max-w-lg">
             {/* Header */}
-            <div className="mb-6">
+            <div className="mb-4 sm:mb-6">
               <p className="text-white/50 text-xs font-medium tracking-widest mb-3">GET IN TOUCH</p>
-              <h2 className="text-3xl md:text-4xl font-light text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-white leading-tight">
                 Let's build<br />something great
               </h2>
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
               <input
                 type="text"
                 name="name"
@@ -89,7 +89,7 @@ export function ContactSection() {
                 placeholder="Brief message (optional)"
                 value={form.message}
                 onChange={handleChange}
-                rows={4}
+                rows={3}
                 className="w-full bg-white/10 border border-white/20 rounded-sm px-4 py-3 text-white text-sm placeholder-white/35 focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all resize-none"
               />
 
@@ -105,7 +105,7 @@ export function ContactSection() {
 
             {/* Success feedback */}
             <div
-              className={`mt-4 px-4 py-3 bg-white/10 border border-white/30 rounded-sm text-white text-sm text-center transition-all duration-500 ${
+              className={`mt-3 sm:mt-4 px-4 py-3 bg-white/10 border border-white/30 rounded-sm text-white text-sm text-center transition-all duration-500 ${
                 submitted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
               }`}
             >
@@ -113,7 +113,7 @@ export function ContactSection() {
             </div>
 
             {/* Contact links */}
-            <div className="mt-8 pt-8 border-t border-white/15 grid grid-cols-2 gap-4">
+            <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/15 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <p className="text-white/40 text-xs tracking-widest mb-2">EMAIL</p>
                 <p className="text-white text-sm hover:opacity-70 transition cursor-pointer">hello@example.com</p>
