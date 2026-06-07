@@ -78,7 +78,7 @@ export function PricingSection() {
   const [billing, setBilling] = useState<BillingPeriod>('monthly');
 
   return (
-    <div className="relative w-full min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+    <div className="relative w-full min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Background video (Cloudinary) */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <video
