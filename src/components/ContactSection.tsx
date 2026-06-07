@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Send } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
@@ -22,6 +22,14 @@ export function ContactSection() {
       setTimeout(() => setSubmitted(false), 4000);
     }, 900);
   }
+
+  // Hide the browser scrollbar visually while ContactSection is active
+  useEffect(() => {
+    document.documentElement.classList.add('hide-scrollbar');
+    return () => {
+      document.documentElement.classList.remove('hide-scrollbar');
+    };
+  }, []);
 
   return (
     <div className="relative w-full min-h-screen">

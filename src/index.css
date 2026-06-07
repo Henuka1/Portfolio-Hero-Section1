@@ -10,6 +10,15 @@
     scroll-behavior: smooth;
   }
 
+  /* utility to visually hide scrollbars but keep scrolling functional */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-light;
   }
