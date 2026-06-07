@@ -79,9 +79,9 @@ function AppContent() {
     document.documentElement.style.colorScheme = isNight ? 'dark' : 'light';
   }, [isNight]);
 
-  // Prevent page scrolling when home, pricing, or contact pages are active
+  // Prevent page scrolling only when the home page is active — allow scrolling on pricing and contact
   useEffect(() => {
-    const noScrollPages = ['home', 'pricing', 'contact'];
+    const noScrollPages = ['home'];
     if (noScrollPages.includes(currentPage)) {
       document.body.style.overflow = 'hidden';
     } else {
