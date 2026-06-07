@@ -113,7 +113,7 @@ export function ContactSection() {
             </div>
 
             {/* Contact links */}
-            <div className="mt-10 pt-8 border-t border-white/15 grid grid-cols-2 gap-4">
+            <div className="mt-8 pt-8 border-t border-white/15 grid grid-cols-2 gap-4">
               <div>
                 <p className="text-white/40 text-xs tracking-widest mb-2">EMAIL</p>
                 <p className="text-white text-sm hover:opacity-70 transition cursor-pointer">hello@example.com</p>
